@@ -1,2 +1,2 @@
 # kernel
- Kernel for MerizoOS>
+ Kernel for MerizoOS.
