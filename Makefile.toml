@@ -1,0 +1,38 @@
+[tasks.build-bin]
+command = "cargo"
+args = ["build"]
+
+[tasks.objcopy-elf]
+command = "cargo"
+args = [
+    "objcopy",
+    "--bin",
+    "merizo-kernel",
+    "--",
+    "-O",
+    "binary",
+    "target/x86_64-unknown-none/debug/merizo-kernel.elf",
+]
+
+[tasks.build]
+dependencies = ["build-bin", "objcopy-elf"]
+
+[tasks.release-build-bin]
+command = "cargo"
+args = ["build", "--release"]
+
+[tasks.release-objcopy-elf]
+command = "cargo"
+args = [
+    "objcopy",
+    "--bin",
+    "merizo-kernel",
+    "--release",
+    "--",
+    "-O",
+    "binary",
+    "target/x86_64-unknown-none/debug/merizo-kernel.elf",
+]
+
+[tasks.rbuild]
+dependencies = ["release-build-bin", "release-objcopy-elf"]

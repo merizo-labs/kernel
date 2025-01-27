@@ -1,8 +1,7 @@
 build:
-    cargo build
-    cargo objcopy --bin merizo-kernel -- -O binary target/x86_64-unknown-none/debug/merizo-kernel.elf
+    cargo make build
 
-build-release:
-    cargo build --release
-    cargo objcopy --bin merizo-kernel --release -- -O binary target/x86_64-unknown-none/release/merizo-kernel.elf
+rbuild:
+    cargo make rbuild
+    
     
