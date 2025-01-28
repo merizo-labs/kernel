@@ -11,7 +11,7 @@ args = [
     "--",
     "-O",
     "binary",
-    "target/x86_64-unknown-none/debug/merizo-kernel.elf",
+    "../images/merizo-kernel.elf",
 ]
 
 [tasks.build]
@@ -31,7 +31,7 @@ args = [
     "--",
     "-O",
     "binary",
-    "target/x86_64-unknown-none/debug/merizo-kernel.elf",
+    "../images/merizo-kernel.elf",
 ]
 
 [tasks.rbuild]
